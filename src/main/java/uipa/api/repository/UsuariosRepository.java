@@ -1,6 +1,8 @@
 package uipa.api.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import uipa.api.model.Usuario;
@@ -11,6 +13,7 @@ import uipa.api.model.Usuario;
 
 @Repository
 
-public interface UsuariosRepository extends CrudRepository<Usuario, Integer> {
-  public Usuario getByCodUsuario(Integer CodUsuario);
+public interface UsuariosRepository extends JpaRepository<Usuario, Integer> {
+  public Usuario findByLoginAndSenha(String nome, String senha);
+  public List<Usuario> findByLoginContaining(String nome);
 }
