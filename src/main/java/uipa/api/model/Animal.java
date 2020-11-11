@@ -1,11 +1,17 @@
 package uipa.api.model;
 
 import java.sql.Timestamp;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,4 +40,12 @@ public class Animal {
   private Integer codAdotante;
   private Timestamp dataAdocao;
 
+  @ManyToOne
+  private Adotante adotante;
+  
+  @ManyToMany(cascade = CascadeType.ALL)
+  @JoinTable(name="vacinado",
+             joinColumns={@JoinColumn(name="CodVacina")},
+             inverseJoinColumns={@JoinColumn(name="CodAnimal")})
+  private List<Vacina> vacinas;
 }

@@ -1,10 +1,12 @@
 package uipa.api.model;
 
-import javax.persistence.Column;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +16,7 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
- * Usuario
+ * Adotante
  */
 
 @Data
@@ -23,19 +25,27 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Entity(name = "usuario")
+@Entity(name = "adotante")
 
-public class Usuario {
+public class Adotante {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer codUsuario;
+  private Integer codAdotante;
+  private String nome;
+  private Integer telefone;
+  private String celular;
+  private String cep;
+  private String endereco;
+  private String bairro;
+  private String cidade;
+  private String uf;
+  private String cpf;
+  private String rg;
+  private Character[] sexo;
+  private String email;
 
-  @Column(unique = true)
-  private String login;
+  @OneToMany
+  private List<Animal> animais;
 
-  private String senha;
-
-  private String biometria;
-  
 }
