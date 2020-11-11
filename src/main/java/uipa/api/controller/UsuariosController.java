@@ -57,7 +57,6 @@ public class UsuariosController {
 
   @PostMapping
   public ResponseEntity<Object> salvar(@RequestBody Usuario usuario) {
-
     try {
       UsuarioResponseDTO usuarioDto = new UsuarioResponseDTO(repository.save(usuario));
       return new ResponseEntity<>(usuarioDto, HttpStatus.CREATED);
