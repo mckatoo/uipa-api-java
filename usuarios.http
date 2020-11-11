@@ -1,0 +1,25 @@
+### lista todos usuarios
+GET http://localhost:8080/api/usuarios
+
+### lista usuarios por nome usando like
+GET http://localhost:8080/api/usuarios/nome/usuario1
+
+### retorna usuario por código
+GET http://localhost:8080/api/usuarios/codusuario/21
+
+### cadastra novo usuario ou atualiza existente se informar todos os dado
+POST http://localhost:8080/api/usuarios
+Content-Type: application/json
+
+{
+	"codUsuario": 7,
+    "login": "usuario7",
+    "senha": "777777",
+    "biometria": null
+}
+
+###
+
+DELETE http://localhost:8080/api/usuarios/33
+
+###
