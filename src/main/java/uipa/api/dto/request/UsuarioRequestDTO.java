@@ -1,5 +1,8 @@
 package uipa.api.dto.request;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +22,7 @@ public class UsuarioRequestDTO {
   private String senha;
   private String biometria;
 
-  public Usuario build() {
+  public Usuario build() throws NoSuchAlgorithmException, UnsupportedEncodingException {
     Usuario usuario = new Usuario()
       .setLogin(this.login)
       .setSenha(this.senha)

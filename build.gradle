@@ -13,18 +13,21 @@ repositories {
 }
 
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test'
+	implementation 'com.auth0:java-jwt:3.11.0'
 	implementation 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
-  compileOnly 'org.projectlombok:lombok:1.18.16'
-  annotationProcessor 'org.projectlombok:lombok:1.18.16'
-  testCompileOnly 'org.projectlombok:lombok:1.18.16'
-  testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+  	compileOnly 'org.projectlombok:lombok:1.18.16'
+  	annotationProcessor 'org.projectlombok:lombok:1.18.16'
+  	testCompileOnly 'org.projectlombok:lombok:1.18.16'
+  	testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-  implementation files('libs/ConsultaCEP.jar')
+  	implementation files('libs/ConsultaCEP.jar')
 }
 
 test {

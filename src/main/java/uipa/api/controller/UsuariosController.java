@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import uipa.api.dto.response.UsuarioResponseDTO;
-import uipa.api.model.ApiMessage;
 import uipa.api.model.Usuario;
 import uipa.api.repository.UsuariosRepository;
+import uipa.api.utils.ApiMessage;
 
 /**
  * UsuariosController

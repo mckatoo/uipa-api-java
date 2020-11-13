@@ -1,17 +1,20 @@
 package uipa.api.model;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+import uipa.api.utils.Security;
 
 /**
  * Usuario
@@ -20,9 +23,8 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
+@ToString()
+@EqualsAndHashCode()
 @Entity(name = "usuario")
 
 public class Usuario {
@@ -37,5 +39,14 @@ public class Usuario {
   private String senha;
 
   private String biometria;
+
+  public Usuario setSenha(String senha) {
+    try {
+      this.senha = new Security().criptografar(senha);
+    } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
   
 }

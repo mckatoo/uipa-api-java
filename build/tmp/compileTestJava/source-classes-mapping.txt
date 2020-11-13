@@ -1,2 +1,7 @@
 uipa/api/ApiApplicationTests.java
  uipa.api.ApiApplicationTests
+uipa/api/UsuariosControllerTest.java
+ uipa.api.UsuariosControllerTest
+uipa/api/UsuariosServiceTest.java
+ uipa.api.UsuariosServiceTest
+ uipa.api.UsuariosServiceTest$UsuariosServiceTestConfiguration

@@ -1,20 +1,30 @@
-uipa/api/controller/AnimaisController.java
- uipa.api.controller.AnimaisController
-uipa/api/model/Animal.java
- uipa.api.model.Animal
-uipa/api/controller/StatusController.java
- uipa.api.controller.StatusController
-uipa/api/ApiApplication.java
- uipa.api.ApiApplication
-uipa/api/model/ApiMessage.java
- uipa.api.model.ApiMessage
-uipa/api/model/Usuario.java
- uipa.api.model.Usuario
-uipa/api/dto/response/UsuarioResponseDTO.java
- uipa.api.dto.response.UsuarioResponseDTO
-uipa/api/dto/request/UsuarioRequestDTO.java
- uipa.api.dto.request.UsuarioRequestDTO
-uipa/api/repository/UsuariosRepository.java
- uipa.api.repository.UsuariosRepository
 uipa/api/controller/UsuariosController.java
  uipa.api.controller.UsuariosController
+uipa/api/dto/response/UsuarioResponseDTO.java
+ uipa.api.dto.response.UsuarioResponseDTO
+uipa/api/repository/UsuariosRepository.java
+ uipa.api.repository.UsuariosRepository
+uipa/api/model/Vacina.java
+ uipa.api.model.Vacina
+uipa/api/utils/ApiMessage.java
+ uipa.api.utils.ApiMessage
+uipa/api/controller/StatusController.java
+ uipa.api.controller.StatusController
+uipa/api/repository/AnimaisRepository.java
+ uipa.api.repository.AnimaisRepository
+uipa/api/controller/AnimaisController.java
+ uipa.api.controller.AnimaisController
+uipa/api/ApiApplication.java
+ uipa.api.ApiApplication
+uipa/api/dto/request/UsuarioRequestDTO.java
+ uipa.api.dto.request.UsuarioRequestDTO
+uipa/api/model/Animal.java
+ uipa.api.model.Animal
+uipa/api/service/UsuariosService.java
+ uipa.api.service.UsuariosService
+uipa/api/model/Adotante.java
+ uipa.api.model.Adotante
+uipa/api/model/Usuario.java
+ uipa.api.model.Usuario
+uipa/api/utils/Security.java
+ uipa.api.utils.Security
