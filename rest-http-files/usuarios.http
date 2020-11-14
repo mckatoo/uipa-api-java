@@ -12,8 +12,8 @@ POST http://localhost:8080/api/usuarios
 Content-Type: application/json
 
 {
-    "login": "usuario5",
-    "senha": "55555555"
+    "login": "usuario6",
+    "senha": "666666"
 }
 
 ###
